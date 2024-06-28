@@ -1,0 +1,23 @@
+[
+    {
+        "dimension": "program",
+        "level": "macro",
+        "question": "Does the following code snippet return the same result as lines 15-19 of the original program?",
+        "snippet": "for i in range(len(second_str)):\n    count[first_str[i]] -= 1\n    count[second_str[i]] += 1\n\nreturn all(_count == 0 for _count in count.values())",
+        "type": "yes_no",
+        "answer": true
+    },
+    {
+        "dimension": "function",
+        "level": "macro",
+        "question": "Which sentence best describes the purpose of the program?",
+        "options": {
+            "a": "Make sure two strings are palindromes.",
+            "b": "See if one string contains the other.",
+            "c": "Check whether two strings are anagrams.",
+            "d": "Count which string contains more vowels."
+        },
+        "type": "multiple_choice",
+        "answer": "c"
+    }
+]

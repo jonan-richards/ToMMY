@@ -1,0 +1,186 @@
+[
+    {
+        "dimension": "program",
+        "level": "macro",
+        "question": "Which of the following code snippets is equivalent to (e.g., gives the same result as) line 19 of the program?",
+        "options": {
+            "a": "df = df[(df[\"yearOfRegistration\"] >= 1890) | (df[\"yearOfRegistration\"] <= 2016)]",
+            "b": "if (df[\"yearOfRegistration\"] >= 1890) & (df[\"yearOfRegistration\"] <= 2016):\n    df = df",
+            "c": "df = df[(df[\"yearOfRegistration\"] >= 2016) & (df[\"yearOfRegistration\"] <= 1890)]",
+            "d": "df = df[df[\"yearOfRegistration\"] >= 1890]\ndf = df[df[\"yearOfRegistration\"] <= 2016]"
+        },
+        "type": "multiple_choice",
+        "answer": "d"
+    },
+    {
+        "dimension": "function",
+        "level": "block/relational",
+        "question": "Indicate the purpose of the code on line 17.",
+        "options": {
+            "a": "Remove all values from the offer type column that are not either 'Gesuch', 'Request', 'Angebot', or 'Offer'.",
+            "b": "Translate the offer type column from German to English.",
+            "c": "Create a new column to indicate if the offer is in German or English.",
+            "d": "Remove duplicate values from the offer type column."
+        },
+        "type": "multiple_choice",
+        "answer": "b"
+    },
+    {
+        "dimension": "function",
+        "level": "macro",
+        "question": "What is the most appropriate name for the entire program?",
+        "options": {
+            "a": "car_brand_visualization",
+            "b": "vehicle_data_cleanup",
+            "c": "vehicle_price_analysis",
+            "d": "price_trend_plot"
+        },
+        "type": "multiple_choice",
+        "answer": "c"
+    },
+    {
+        "dimension": "program",
+        "level": "block/relational",
+        "question": "Indicate which block of code is responsible for filtering data. A block may consist of one or more sequential lines. Give the starting and ending line numbers of this block. Note that there may be multiple correct answers.",
+        "type": "block",
+        "answer": [
+            [
+                19,
+                19
+            ],
+            [
+                19,
+                34
+            ],
+            [
+                21,
+                34
+            ],
+            [
+                25,
+                34
+            ],
+            [
+                26,
+                34
+            ],
+            [
+                19,
+                35
+            ],
+            [
+                21,
+                35
+            ],
+            [
+                25,
+                35
+            ],
+            [
+                26,
+                35
+            ]
+        ]
+    },
+    {
+        "dimension": "function",
+        "level": "atom",
+        "question": "Indicate which line of code performs the following function: 'Restructure the table so that columns represent vehicle types, rows represent brands, and the values represent average prices'. Give the line number of this line.",
+        "type": "line",
+        "answer": [
+            51
+        ]
+    },
+    {
+        "dimension": "program",
+        "level": "atom",
+        "question": "Given the following values for `_median`, `_quantile75`, and `_quantile25`, indicate the value `iqr` (line 24) will take on.",
+        "description": {
+            "_median": {
+                "table": [
+                    [
+                        "vehicleType",
+                        ""
+                    ],
+                    [
+                        "bus",
+                        3
+                    ],
+                    [
+                        "cabrio",
+                        1
+                    ]
+                ]
+            },
+            "_quantile75": {
+                "table": [
+                    [
+                        "vehicleType",
+                        ""
+                    ],
+                    [
+                        "bus",
+                        6
+                    ],
+                    [
+                        "cabrio",
+                        4
+                    ]
+                ]
+            },
+            "_quantile25": {
+                "table": [
+                    [
+                        "vehicleType",
+                        ""
+                    ],
+                    [
+                        "bus",
+                        2
+                    ],
+                    [
+                        "cabrio",
+                        1
+                    ]
+                ]
+            },
+            "iqr": {
+                "table": [
+                    [
+                        "vehicleType",
+                        ""
+                    ],
+                    [
+                        "a",
+                        "b"
+                    ],
+                    [
+                        "c",
+                        "d"
+                    ]
+                ]
+            }
+        },
+        "type": "text",
+        "multiple": true,
+        "answer": [
+            [
+                "bus"
+            ],
+            [
+                9,
+                "9",
+                "9.0",
+                "9,0"
+            ],
+            [
+                "cabrio"
+            ],
+            [
+                5.5,
+                "5.5",
+                "5,5"
+            ]
+        ]
+    }
+]

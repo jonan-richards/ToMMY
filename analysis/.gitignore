@@ -1,0 +1,10 @@
+__pycache__
+/figures/*
+/data/*
+!/data/evaluations.csv
+!/data/interactions.csv
+!/data/participants.csv
+!/data/tasks.csv
+!/data/coding.xlsx
+!/data/simulated-conversation-advanced.json
+!/data/simulated-conversation-novice.json

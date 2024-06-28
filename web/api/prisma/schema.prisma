@@ -1,0 +1,58 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    ID Int @id @default(autoincrement())
+
+    username String  @unique
+    password String
+    group    String
+    isAdmin  Boolean @default(false)
+
+    steps               UserStep[]
+    interactionMessages InteractionMessage[]
+}
+
+model QualtricsProject {
+    ID Int @id @default(autoincrement())
+
+    key String @unique
+    URL String
+}
+
+model UserStep {
+    ID Int @id @default(autoincrement())
+
+    userID    Int
+    key       String
+    completed Boolean   @default(false)
+    startTime DateTime  @default(now())
+    endTime   DateTime?
+
+    user User @relation(fields: [userID], references: [ID])
+
+    @@unique([userID, key])
+}
+
+model InteractionMessage {
+    ID Int @id @default(autoincrement())
+
+    userID           Int
+    task             String
+    order            Int
+    content          String
+    type             String // ai, user, internal
+    tokenCountInput  Int?
+    tokenCountOutput Int?
+    timeMS           Int?
+
+    user User @relation(fields: [userID], references: [ID])
+
+    @@unique([userID, task, order])
+}

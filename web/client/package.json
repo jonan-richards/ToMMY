@@ -1,0 +1,54 @@
+{
+    "name": "@tommy-web/client",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "host": "vite --host"
+    },
+    "imports": {
+        "#shared/*": "@tommy-web/shared/*"
+    },
+    "dependencies": {
+        "@tommy-web/shared": "^0.1.0",
+        "@highlightjs/vue-plugin": "^2.1.0",
+        "@mdi/font": "^7.0.96",
+        "@vee-validate/yup": "^4.9.5",
+        "@vueuse/core": "^10.9.0",
+        "highlight.js": "^11.9.0",
+        "highlightjs-line-numbers.js": "^2.8.0",
+        "pinia": "^2.1.4",
+        "roboto-fontface": "^0.10.0",
+        "vee-validate": "^4.9.5",
+        "vite-plugin-eslint": "^1.8.1",
+        "vite-plugin-vuetify": "^2.0.2",
+        "vue": "^3.4.10",
+        "vue-markdown-render": "^2.1.1",
+        "vue-router": "^4.2.5",
+        "vuetify": "^3.4.10",
+        "webfontloader": "^1.0.0",
+        "yup": "^1.2.0"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.7.0",
+        "@types/markdown-it": "^14.1.1",
+        "@types/webfontloader": "^1.0.0",
+        "@vitejs/plugin-basic-ssl": "^1.1.0",
+        "@vitejs/plugin-vue": "^5.0.3",
+        "@vue/eslint-config-airbnb-with-typescript": "^8.0.0",
+        "eslint-plugin-vue": "^9.20.0",
+        "eslint-plugin-vuetify": "^2.1.1",
+        "sass": "^1.32.7",
+        "sass-loader": "^13.2.0",
+        "typescript": "^4.8.4",
+        "vite": "^5.0.11",
+        "vue-eslint-parser": "^9.4.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead",
+        "not ie 11"
+    ]
+}

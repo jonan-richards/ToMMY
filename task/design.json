@@ -1,0 +1,29 @@
+{
+    "stages": {
+        "A": {
+            "tasks": [
+                "natural-language-processing"
+            ]
+        },
+        "B": {
+            "tasks": [
+                "data-analysis"
+            ]
+        }
+    },
+    "groups": {
+        "control-first": {
+            "models": {
+                "A": "control",
+                "B": "tom"
+            }
+        },
+        "tom-first": {
+            "models": {
+                "A": "tom",
+                "B": "control"
+            }
+        }
+    },
+    "example": "string-anagram"
+}

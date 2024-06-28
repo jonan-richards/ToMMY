@@ -1,0 +1,108 @@
+[
+    {
+        "dimension": "function",
+        "level": "atom",
+        "question": "Indicate the purpose of the code on line 17.",
+        "options": {
+            "a": "Pair up the names of the student's documents with the corresponding vectors.",
+            "b": "Determine the similarity score for each student's document.",
+            "c": "Sort the student filenames and their corresponding vectors.",
+            "d": "Remove the student files for which the vector is empty."
+        },
+        "type": "multiple_choice",
+        "answer": "a"
+    },
+    {
+        "dimension": "program",
+        "level": "macro",
+        "question": "Which of the following code snippets is equivalent to (e.g., gives the same result as) lines 28-31 of the program?",
+        "options": {
+            "a": "comparison = (student_a, student_b, similarity(text_vector_a, text_vector_b)[0][1], similarity(text_vector_a, text_vector_b)[0][1] > threshold)",
+            "b": "comparison = (student_a, student_b, similarity([text_vector_a, text_vector_b])[0][1], sim_score > threshold)",
+            "c": "comparison = (*sorted((student_a, student_b)), similarity(text_vector_a, text_vector_b)[0][1], similarity(text_vector_a, text_vector_b)[0][1] > threshold)",
+            "d": "comparison = (*sorted((student_a, student_b)), similarity(text_vector_a, text_vector_b)[0][1], sim_score > threshold)"
+        },
+        "type": "multiple_choice",
+        "answer": "c"
+    },
+    {
+        "dimension": "function",
+        "level": "macro",
+        "question": "Which sentence best describes the purpose of the program?",
+        "options": {
+            "a": "Check whether students have plagiarized each other.",
+            "b": "Analyze texts submitted by students.",
+            "c": "Sort student's assignments based on their similarity.",
+            "d": "Determine if students have submitted a correct solution."
+        },
+        "type": "multiple_choice",
+        "answer": "a"
+    },
+    {
+        "dimension": "function",
+        "level": "block/relational",
+        "question": "Give the starting and ending line numbers of the code that performs the following function: 'Get the names of each student's file and their contents'.",
+        "type": "block",
+        "answer": [
+            [
+                4,
+                7
+            ],
+            [
+                5,
+                7
+            ],
+            [
+                4,
+                8
+            ],
+            [
+                5,
+                8
+            ]
+        ]
+    },
+    {
+        "dimension": "program",
+        "level": "atom",
+        "question": "Given the following value for `s_vectors` and `student_a`, determine the results of each of the operations below.",
+        "input": {
+            "s_vectors": "[(\"alice.txt\", [1, 2, 3]), (\"bert.txt\", [4, 5, 6])]",
+            "student_a": "\"bert.txt\""
+        },
+        "operations": [
+            {
+                "line": 22,
+                "output": {
+                    "new_vectors": "a"
+                }
+            },
+            {
+                "line": 24,
+                "output": {
+                    "current_index": "b"
+                }
+            },
+            {
+                "line": 25,
+                "output": {
+                    "new_vectors": "c"
+                }
+            }
+        ],
+        "type": "regex",
+        "multiple": true,
+        "answer": [
+            "^(s_vectors:\\s*)?\\[?\\([\"']alice\\.txt[\"'],\\s*\\[1,\\s*2,\\s*3\\]\\),\\s*\\([\"']bert\\.txt[\"'],\\s*\\[4,\\s*5,\\s*6\\]\\)\\]?$",
+            "^1$",
+            "^(s_vectors:\\s*)?\\[?\\([\"']alice\\.txt[\"'],\\s*\\[1,\\s*2,\\s*3\\]\\)\\]?$"
+        ]
+    },
+    {
+        "dimension": "program",
+        "level": "block/relational",
+        "question": "An accumulator is a variable that is updated several times with partial information, so that it can later be used to present a composite result. Name the variable that acts as an accumulator in this program.",
+        "type": "text",
+        "answer": "comparisons"
+    }
+]
