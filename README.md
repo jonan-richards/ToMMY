@@ -1,5 +1,5 @@
 # ToMMY - web client and replication package
-This is the replication package for my Master's thesis "What You Need is What You Get: Theory of Mind for LLM-generated Code Explanations".
+This is the replication package for my Master's thesis "What You Need is What You Get: Theory of Mind for LLM-Generated Code Explanations".
 
 ## Files
 The package contains the following items:
